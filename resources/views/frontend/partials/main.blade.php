@@ -61,7 +61,6 @@
                             <a href="{{route('post.single',$post->id)}}">
                                 {!! date("F j, Y, g:i a") !!}</a>
                         </div>
-                        <div class="eskimo-reading-meta">3 min read</div>
                     </div>
                 </div>
                 <div class="card-horizontal-right" data-img="{{ $post->image }}">

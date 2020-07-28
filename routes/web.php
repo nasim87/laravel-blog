@@ -16,6 +16,11 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('frontend.pages.index');
 // });
+Route::post('/subscribe', function () {
+    $email=request('email');
+    Newsletter::subscribe($email);
+    return redirect()->back();
+});
 Route::get('/postCreate','PostController@create')->name('post.create');
 Route::post('/postCreate','PostController@store')->name('post.store');
 Route::get('/postShow','PostController@index')->name('post.index');
@@ -23,3 +28,4 @@ Route::get('/admin','AdminController@index')->name('post.index');
 Route::get('/','FrontendController@index');
 Route::get('/about','FrontendController@about')->name('about');
 Route::get('/single/{id}','FrontendController@single')->name('post.single');
+Route::get('/category/{id}','FrontendController@category')->name('post.category');

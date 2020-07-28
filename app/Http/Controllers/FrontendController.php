@@ -29,4 +29,10 @@ class FrontendController extends Controller
         ->with('relatedPosts',Post::inRandomOrder()->take(1)->get())
         ->with('post',$post);
     }
+    public function category($id)
+    {
+        $category=Category::findOrFail($id);
+        return view('frontend.pages.category')
+        ->with('category',$category);
+    }
 }
