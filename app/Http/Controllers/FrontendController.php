@@ -17,12 +17,16 @@ class FrontendController extends Controller
         return view('index')
         ->with('posts',$posts)
         ->with('sliderPost',$sliderPost)
+        ->with('slideCats',Category::get())
+        ->with('recentPosts',Post::with('category')->take(8)->get())
         ->with('popularPost',Post::with('category')->skip(10)->take(10)->get());
     }
     public function about()
     {
         $portfolios=Portfolio::take(6)->get();
         return view('frontend.pages.about')
+        ->with('recentPosts',Post::with('category')->take(8)->get())
+        ->with('slideCats',Category::get())
         ->with('portfolios',$portfolios);;
     }
     public function single($id)
