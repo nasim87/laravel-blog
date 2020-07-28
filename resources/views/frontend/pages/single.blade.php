@@ -23,7 +23,7 @@
                     By <a class="author-meta" href="author.html">Egemenerd</a>
                 </div>
                 <div class="eskimo-cat-meta">
-                    In <a href="{{route('post.category',$post->category->id)}}">{{$post->category->name}}</a>
+                    In <a href="{{route('post.category',$post->id)}}">{{$post->category->name}}</a>
                 </div>
                 <div class="eskimo-date-meta">{!! date("F j, Y, g:i a") !!}</div>
             </div>

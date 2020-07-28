@@ -25,7 +25,7 @@
                     <a class="eskimo-slider-img" href="{{route('post.single',$slider->id)}}"></a>
                     <ul class="eskimo-slider-image-meta eskimo-image-meta-post">
                         <li><a href="{{route('post.single',$slider->id)}}"><span class="badge badge-default">{!! date("F j, Y, g:i a") !!}</span></a></li>
-                        <li><a href="category.html"><span class="badge badge-default">{{$slider->category->name}}</span></a></li>
+                        <li><a href="{{route('post.category',$slider->id)}}"><span class="badge badge-default">{{$slider->category->name}}</span></a></li>
                     </ul>
                     <div class="clearfix"></div>
                     <img src="{{$slider->image}}" width="1200" height="600" alt="Ketchup Flavored Ice Cream!" />
@@ -48,7 +48,7 @@
             <div class="card-body">
                 <div class="card-horizontal-left">
                     <div class="card-category">
-                        <a href="category.html">{{$post->category->name}}</a> </div>
+                        <a href="{{route('post.category',$post->id)}}">{{$post->category->name}}</a> </div>
                     <h3 class="card-title"><a href="{{route('post.single',$post->id)}}">{{$post->title}}</a></h3>
                     <div class="card-excerpt">
                         <p>{!! strip_tags($post->description) !!}...</p>

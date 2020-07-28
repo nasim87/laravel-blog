@@ -33,6 +33,8 @@ class FrontendController extends Controller
     {
         $post=Post::findOrFail($id);
         return view('frontend.pages.single')
+        ->with('slideCats',Category::get())
+        ->with('recentPosts',Post::with('category')->take(8)->get())
         ->with('relatedPosts',Post::inRandomOrder()->take(1)->get())
         ->with('post',$post);
     }
@@ -40,6 +42,8 @@ class FrontendController extends Controller
     {
         $category=Category::findOrFail($id);
         return view('frontend.pages.category')
+        ->with('slideCats',Category::get())
+        ->with('recentPosts',Post::with('category')->take(8)->get())
         ->with('category',$category);
     }
 }
