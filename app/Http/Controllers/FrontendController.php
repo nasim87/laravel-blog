@@ -46,4 +46,13 @@ class FrontendController extends Controller
         ->with('recentPosts',Post::with('category')->take(8)->get())
         ->with('category',$category);
     }
+    public function gallery()
+    {
+        $images=Portfolio::take(6)->get();
+        return view('frontend.pages.gallery')
+        ->with('imageEight',Portfolio::take(8)->get()) 
+        ->with('slideCats',Category::get()) 
+        ->with('recentPosts',Post::with('category')->take(8)->get())
+        ->with('images',$images);
+    }
 }

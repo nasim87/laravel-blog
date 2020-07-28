@@ -27,6 +27,7 @@ Route::get('/postShow','PostController@index')->name('post.index');
 Route::get('/admin','AdminController@index')->name('post.index');
 Route::get('/','FrontendController@index');
 Route::get('/about','FrontendController@about')->name('about');
+Route::get('/portfolio','FrontendController@gallery')->name('gallery');
 Route::get('/single/{id}','FrontendController@single')->name('post.single');
 Route::get('/category/{id}','FrontendController@category')->name('post.category');
 Route::post('/contactus','ContactController@store')->name('contact.store');

@@ -16,7 +16,7 @@
                     <li><a href="/">Home</a></li>
                     <li><a href="{{route('about')}}">About Me</a></li>
                     <li><a href="#">Blog</a></li>
-                    <li><a href="galleries.html">Galleries</a></li>
+                    <li><a href="{{route('gallery')}}">Galleries</a></li>
                     <li><a href="other-features.html">Other Features</a></li>
                 </ul>
             </nav>
