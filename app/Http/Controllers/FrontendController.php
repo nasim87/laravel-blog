@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Category;
 use App\Post;
 use App\User;
+use App\Portfolio;
 use Illuminate\Http\Request;
 
 class FrontendController extends Controller
@@ -20,7 +21,9 @@ class FrontendController extends Controller
     }
     public function about()
     {
-        return view('frontend.pages.about');
+        $portfolios=Portfolio::take(6)->get();
+        return view('frontend.pages.about')
+        ->with('portfolios',$portfolios);;
     }
     public function single($id)
     {

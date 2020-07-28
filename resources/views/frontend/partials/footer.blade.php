@@ -5,7 +5,9 @@
             <!-- FOOTER WIDGET 1 -->
             <div class="col-12 col-lg-6 mb-4 mb-lg-0">
                 <h5 class="eskimo-title-with-border"><span>About Me</span></h5>
-                <p>Trusted by thousands of customers, my unique themes and plugins help you make beautiful responsive web sites with ease.</p>
+                <p>Customers have believed me for their excellent projects. Every projects are delivered on time and they are completed successfully with the full 
+                    requirements of the customers.  you can also Hire me for your project.
+                </p>
                 <p><a href="{{route('about')}}" class="btn btn-default">Read More</a></p>
             </div>
             <!-- FOOTER WIDGET 2 -->
