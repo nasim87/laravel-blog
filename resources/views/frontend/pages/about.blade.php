@@ -46,7 +46,7 @@
                 </div>
             </div>
             <div class="col-12 col-lg-5 order-1 order-lg-2 mb-5 mb-lg-0">
-                <img src="images/600x600.png" alt="Jane Doe" class="img-fluid mx-auto d-block eskimo-img-shadow" />
+                <img src="https://scontent.fcgp3-1.fna.fbcdn.net/v/t1.0-9/59809751_2146742375413089_1631343404971458560_n.jpg?_nc_cat=105&_nc_sid=7aed08&_nc_eui2=AeG0zCjciqMqPR9QvpigbSEHcWmBQAoOwDpxaYFACg7AOkEOBbXIZg0lpgh-vjvvbgNDXwracKf5e0TglZJN5Pr8&_nc_ohc=2K-WfG40YaIAX_DSaXv&_nc_ht=scontent.fcgp3-1.fna&oh=0adab52affa1b4de8b7431c04434c32c&oe=5F45431C" alt="Jane Doe" class="img-fluid mx-auto d-block eskimo-img-shadow" />
             </div>
         </div>
         <!-- DIVIDER -->
@@ -148,4 +148,15 @@
         <div id="form-messages"></div>
     </div>
 </main>
+@include('frontend.partials.footer')
+</div>
+<!-- GO TO TOP BUTTON -->
+<a id="eskimo-gototop" href="#"><i class="fa fa-chevron-up"></i></a>
+<!-- SLIDE PANEL OVERLAY -->
+<div id="eskimo-overlay"></div>
+<!-- SLIDE PANEL -->
+<div id="eskimo-panels">
+    
+@include('frontend.partials.slidePanel')
+@include('frontend.partials.search')
 @endsection
